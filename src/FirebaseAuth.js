@@ -27,7 +27,7 @@
 
     if (typeof auth === 'string') {
       throw new Error('The $firebaseAuth service accepts a Firebase auth instance (or nothing) instead of a URL.');
-    } else if (typeof auth.ref !== 'undefined') {
+    } else if (typeof auth.ref === 'undefined') {
       throw new Error('The $firebaseAuth service accepts a Firebase auth instance (or nothing) instead of a Database reference.');
     }
 
